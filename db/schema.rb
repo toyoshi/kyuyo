@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130604020352) do
+ActiveRecord::Schema.define(:version => 20130604043545) do
 
   create_table "payslips", :force => true do |t|
     t.date     "payslip_date"
@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(:version => 20130604020352) do
     t.date     "work_from"
     t.date     "work_to"
     t.integer  "working_days"
-    t.time     "working_time"
+    t.string   "working_time"
     t.integer  "basic_pay"
     t.integer  "transportation_expenses"
     t.integer  "income_tax"
