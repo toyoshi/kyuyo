@@ -14,6 +14,7 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></th>
   </tr>
 
 <% @payslips.each do |payslip| %>
@@ -28,6 +29,7 @@
     <td><%= payslip.transportation_expenses %></td>
     <td><%= payslip.income_tax %></td>
     <td><%= link_to 'Show', payslip %></td>
+    <td><%= link_to 'PDF',  payslip_pdf_path(payslip) %></td>
     <td><%= link_to 'Edit', edit_payslip_path(payslip) %></td>
     <td><%= link_to 'Destroy', payslip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>

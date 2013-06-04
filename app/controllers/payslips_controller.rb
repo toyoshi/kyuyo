@@ -1,4 +1,6 @@
 class PayslipsController < ApplicationController
+  include ActionView::Helpers::NumberHelper
+
   # GET /payslips
   # GET /payslips.json
   def index
@@ -19,6 +21,31 @@ class PayslipsController < ApplicationController
       format.html # show.html.erb
       format.json { render json: @payslip }
     end
+  end
+
+  def pdf
+    @payslip = Payslip.find(params[:id])
+
+    reports = ThinReports::Report.new layout: File.join(Rails.root , 'app', 'reports', 'basic')
+    reports.start_new_page do |page|
+      page.item(:name).value(@payslip.name)
+      page.item(:payslip_date).value(@payslip.payslip_date.strftime("%Y年%m月"))
+
+      %w(work_from work_to).each do |key|
+        page.item(key.to_sym).value(@payslip.send(key).strftime("%Y年%m月%d日"))
+      end
+
+      %w(working_days working_time).each do |key|
+        page.item(key.to_sym).value(@payslip.send(key))
+      end
+
+      %w(basic_pay transportation_expenses income_tax allowanance_amount deduction_amount balance).each do |key|
+        page.item(key.to_sym).value("#{number_with_delimiter(@payslip.send(key))}円")
+      end
+    end
+
+    send_data reports.generate, filename: "payslip#{@payslip.id}",
+      type: 'application/pdf', disposition: 'attachment'
   end
 
   # GET /payslips/new

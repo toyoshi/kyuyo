@@ -46,3 +46,6 @@ gem "twitter-bootstrap-rails"
 
 # To use debugger
 # gem 'debugger'
+
+gem 'thinreports'
+

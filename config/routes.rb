@@ -1,6 +1,8 @@
 Kyuyo::Application.routes.draw do
   resources :payslips
+  get 'payslips/:id/pdf' => 'payslips#pdf',  as: 'payslip_pdf'
 
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
