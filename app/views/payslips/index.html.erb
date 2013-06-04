@@ -1,16 +1,15 @@
-<h1>Listing payslips</h1>
+<h1>給与明細一覧</h1>
 
-<table>
+<table class="table">
   <tr>
-    <th>Payslip date</th>
-    <th>Name</th>
-    <th>Work from</th>
-    <th>Work to</th>
-    <th>Working days</th>
-    <th>Working time</th>
-    <th>Basic pay</th>
-    <th>Transportation expenses</th>
-    <th>Income tax</th>
+    <th>年月</th>
+    <th>名前</th>
+    <th>労働時間</th>
+    <th>基本給</th>
+    <th>支給額</th>
+    <th>控除額</th>
+    <th>差引支給額</th>
+    <th></th>
     <th></th>
     <th></th>
     <th></th>
@@ -21,13 +20,11 @@
   <tr>
     <td><%= payslip.payslip_date %></td>
     <td><%= payslip.name %></td>
-    <td><%= payslip.work_from %></td>
-    <td><%= payslip.work_to %></td>
-    <td><%= payslip.working_days %></td>
     <td><%= payslip.working_time %></td>
     <td><%= payslip.basic_pay %></td>
-    <td><%= payslip.transportation_expenses %></td>
-    <td><%= payslip.income_tax %></td>
+    <td><%= payslip.allowanance_amount %></td>
+    <td><%= payslip.deduction_amount %></td>
+    <td><%= payslip.balance %></td>
     <td><%= link_to 'Show', payslip %></td>
     <td><%= link_to 'PDF',  payslip_pdf_path(payslip) %></td>
     <td><%= link_to 'Edit', edit_payslip_path(payslip) %></td>
