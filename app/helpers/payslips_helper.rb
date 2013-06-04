@@ -1,0 +1,2 @@
+module PayslipsHelper
+end

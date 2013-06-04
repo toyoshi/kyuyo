@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Payslip date:</b>
+  <%= @payslip.payslip_date %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @payslip.name %>
+</p>
+
+<p>
+  <b>Work from:</b>
+  <%= @payslip.work_from %>
+</p>
+
+<p>
+  <b>Work to:</b>
+  <%= @payslip.work_to %>
+</p>
+
+<p>
+  <b>Working days:</b>
+  <%= @payslip.working_days %>
+</p>
+
+<p>
+  <b>Working time:</b>
+  <%= @payslip.working_time %>
+</p>
+
+<p>
+  <b>Basic pay:</b>
+  <%= @payslip.basic_pay %>
+</p>
+
+<p>
+  <b>Transportation expenses:</b>
+  <%= @payslip.transportation_expenses %>
+</p>
+
+<p>
+  <b>Income tax:</b>
+  <%= @payslip.income_tax %>
+</p>
+
+
+<%= link_to 'Edit', edit_payslip_path(@payslip) %> |
+<%= link_to 'Back', payslips_path %>

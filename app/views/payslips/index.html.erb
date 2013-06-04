@@ -1,0 +1,39 @@
+<h1>Listing payslips</h1>
+
+<table>
+  <tr>
+    <th>Payslip date</th>
+    <th>Name</th>
+    <th>Work from</th>
+    <th>Work to</th>
+    <th>Working days</th>
+    <th>Working time</th>
+    <th>Basic pay</th>
+    <th>Transportation expenses</th>
+    <th>Income tax</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @payslips.each do |payslip| %>
+  <tr>
+    <td><%= payslip.payslip_date %></td>
+    <td><%= payslip.name %></td>
+    <td><%= payslip.work_from %></td>
+    <td><%= payslip.work_to %></td>
+    <td><%= payslip.working_days %></td>
+    <td><%= payslip.working_time %></td>
+    <td><%= payslip.basic_pay %></td>
+    <td><%= payslip.transportation_expenses %></td>
+    <td><%= payslip.income_tax %></td>
+    <td><%= link_to 'Show', payslip %></td>
+    <td><%= link_to 'Edit', edit_payslip_path(payslip) %></td>
+    <td><%= link_to 'Destroy', payslip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Payslip', new_payslip_path %>

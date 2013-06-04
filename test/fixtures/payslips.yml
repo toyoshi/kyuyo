@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  payslip_date: 2013-06-04
+  name: MyString
+  work_from: 2013-06-04
+  work_to: 2013-06-04
+  working_days: 1
+  working_time: 2013-06-04 11:03:52
+  basic_pay: 1
+  transportation_expenses: 1
+  income_tax: 1
+
+two:
+  payslip_date: 2013-06-04
+  name: MyString
+  work_from: 2013-06-04
+  work_to: 2013-06-04
+  working_days: 1
+  working_time: 2013-06-04 11:03:52
+  basic_pay: 1
+  transportation_expenses: 1
+  income_tax: 1

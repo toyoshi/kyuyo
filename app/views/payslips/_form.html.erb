@@ -1,0 +1,53 @@
+<%= form_for(@payslip) do |f| %>
+  <% if @payslip.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@payslip.errors.count, "error") %> prohibited this payslip from being saved:</h2>
+
+      <ul>
+      <% @payslip.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :payslip_date %><br />
+    <%= f.date_select :payslip_date %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :work_from %><br />
+    <%= f.date_select :work_from %>
+  </div>
+  <div class="field">
+    <%= f.label :work_to %><br />
+    <%= f.date_select :work_to %>
+  </div>
+  <div class="field">
+    <%= f.label :working_days %><br />
+    <%= f.number_field :working_days %>
+  </div>
+  <div class="field">
+    <%= f.label :working_time %><br />
+    <%= f.time_select :working_time %>
+  </div>
+  <div class="field">
+    <%= f.label :basic_pay %><br />
+    <%= f.number_field :basic_pay %>
+  </div>
+  <div class="field">
+    <%= f.label :transportation_expenses %><br />
+    <%= f.number_field :transportation_expenses %>
+  </div>
+  <div class="field">
+    <%= f.label :income_tax %><br />
+    <%= f.number_field :income_tax %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
