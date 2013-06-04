@@ -1,4 +1,6 @@
 Kyuyo::Application.routes.draw do
+  root :to => 'payslips#index'
+
   resources :payslips
   get 'payslips/:id/pdf' => 'payslips#pdf',  as: 'payslip_pdf'
 
