@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :payslip_date %><br />
-    <%= f.date_select :payslip_date %>
+    <%= f.date_select :payslip_date, { discard_day: true, use_month_numbers: true } %>
   </div>
   <div class="field">
     <%= f.label :name %><br />

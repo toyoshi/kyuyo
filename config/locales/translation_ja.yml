@@ -1,0 +1,16 @@
+ja:
+  activerecord:
+    models:
+      payslip: '給与支払明細書'  #g
+
+    attributes:
+      payslip:
+        basic_pay: '基本給'  #g
+        income_tax: '所得税'  #g
+        name: '氏名'  #g
+        payslip_date: '発行年月' #g
+        transportation_expenses: '非課税通勤費' #g
+        work_from: '労働開始日' #g
+        work_to: '労働終了日'  #g
+        working_days: '労働日数'  #g
+        working_time: '労働時間'  #g

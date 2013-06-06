@@ -53,3 +53,4 @@ gem "twitter-bootstrap-rails"
 
 gem 'thinreports'
 
+gem 'i18n_generators'

@@ -47,13 +47,20 @@ GEM
       sass (~> 3.1)
     compass-rails (1.0.3)
       compass (>= 0.12.2, < 0.14)
+    domain_name (0.5.11)
+      unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
     fssm (0.2.10)
     hashery (2.1.0)
     hike (1.2.2)
+    http-cookie (1.0.1)
+      domain_name (~> 0.5)
     i18n (0.6.1)
+    i18n_generators (1.2.1)
+      mechanize
+      rails (>= 3.0.0)
     journey (1.0.4)
     jquery-rails (3.0.0)
       railties (>= 3.0, < 5.0)
@@ -68,8 +75,21 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mechanize (2.7.1)
+      domain_name (~> 0.5, >= 0.5.1)
+      http-cookie (~> 1.0.0)
+      mime-types (~> 1.17, >= 1.17.2)
+      net-http-digest_auth (~> 1.1, >= 1.1.1)
+      net-http-persistent (~> 2.5, >= 2.5.2)
+      nokogiri (~> 1.4)
+      ntlm-http (~> 0.1, >= 0.1.1)
+      webrobots (>= 0.0.9, < 0.2)
     mime-types (1.23)
     multi_json (1.7.5)
+    net-http-digest_auth (1.3)
+    net-http-persistent (2.8)
+    nokogiri (1.5.9)
+    ntlm-http (0.1.1)
     pdf-reader (1.3.3)
       Ascii85 (~> 1.0.0)
       afm (~> 0.2.0)
@@ -138,6 +158,10 @@ GEM
     uglifier (2.1.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    unf (0.1.1)
+      unf_ext
+    unf_ext (0.0.6)
+    webrobots (0.1.1)
     zurui-sass-rails (0.0.4)
       railties (>= 3.1)
 
@@ -147,6 +171,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   compass-rails
+  i18n_generators
   jquery-rails
   less-rails
   pg
