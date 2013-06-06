@@ -1,5 +1,13 @@
-<h1>新規作成</h1>
+<ul class="nav nav-tabs" id="myTab">
+  <li class="active"><a href="#new" data-toggle="tab">個別作成</a></li>
+  <li><a href="#csv" data-toggle="tab">CSV一括作成</a></li>
+</ul>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', payslips_path %>
+<div class="tab-content">
+  <div class="tab-pane active" id="new">
+    <%= render 'form' %>
+  </div>
+  <div class="tab-pane" id="csv">
+    <p>CSVによる一括作成</p>
+  </div>
+</div>

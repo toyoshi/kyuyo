@@ -51,8 +51,8 @@ class PayslipsController < ApplicationController
           type: 'application/pdf', disposition: 'attachment'
 
         #save without name
-        @payslip.name = '***'
-        @payslip.save
+        #@payslip.name = '***'
+        #@payslip.save
 
         return
       else

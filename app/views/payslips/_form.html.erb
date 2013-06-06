@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :payslip_date %><br />
-    <%= f.date_select :payslip_date, { discard_day: true, use_month_numbers: true } %>
+    <%= f.date_select :payslip_date, { discard_day: true, use_month_numbers: true }, { class: 'input-small' } %>
   </div>
   <div class="field">
     <%= f.label :name %><br />
@@ -21,11 +21,11 @@
   </div>
   <div class="field">
     <%= f.label :work_from %><br />
-    <%= f.date_select :work_from %>
+    <%= f.date_select :work_from, {}, { class: 'input-small' } %>
   </div>
   <div class="field">
     <%= f.label :work_to %><br />
-    <%= f.date_select :work_to %>
+    <%= f.date_select :work_to, {}, { class: 'input-small' } %>
   </div>
   <div class="field">
     <%= f.label :working_days %><br />
@@ -48,6 +48,6 @@
     <%= f.number_field :income_tax %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit value: 'PDFをダウンロード' %>
   </div>
 <% end %>
