@@ -11,9 +11,6 @@
     <th>差引支給額</th>
     <th></th>
     <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @payslips.each do |payslip| %>
@@ -25,10 +22,8 @@
     <td><%= payslip.allowanance_amount %></td>
     <td><%= payslip.deduction_amount %></td>
     <td><%= payslip.balance %></td>
-    <td><%= link_to 'Show', payslip %></td>
+    <td><%= link_to '詳細', payslip %></td>
     <td><%= link_to 'PDF',  payslip_pdf_path(payslip) %></td>
-    <td><%= link_to 'Edit', edit_payslip_path(payslip) %></td>
-    <td><%= link_to 'Destroy', payslip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
