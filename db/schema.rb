@@ -13,7 +13,4 @@
 
 ActiveRecord::Schema.define(:version => 20130607151510) do
 
-# Could not dump table "payslips" because of following StandardError
-#   Unknown type 'stirng' for column 'allow_2_label'
-
 end
