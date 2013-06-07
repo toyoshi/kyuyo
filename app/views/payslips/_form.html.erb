@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+  <p>必要事項を記入してページ下部のボタンを押せばPDFの給与明細が取得出来ます</p>
   <table class="table table-bordered">
     <tr>
       <th> <%= f.label :payslip_date %></th>
@@ -100,7 +101,8 @@
     </tr>
   </table>
 
-  <div class="actions">
+  <div style='text-align:center' class="actions">
+    <p>※入力されたデータはサーバには保存されません。</p>
     <%= f.submit value: 'PDFをダウンロード', class: 'btn btn-large btn-primary' %>
   </div>
 <% end %>
