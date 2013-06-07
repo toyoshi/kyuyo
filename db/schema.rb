@@ -13,4 +13,39 @@
 
 ActiveRecord::Schema.define(:version => 20130607151510) do
 
+  create_table "payslips", :force => true do |t|
+    t.date     "payslip_date"
+    t.string   "name"
+    t.date     "work_from"
+    t.date     "work_to"
+    t.integer  "working_days"
+    t.string   "working_time"
+    t.integer  "basic_pay"
+    t.integer  "transportation_expenses"
+    t.integer  "income_tax"
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+    t.string   "outworking_time"
+    t.string   "allow_1_label"
+    t.integer  "allow_1"
+    t.string   "allow_2_label"
+    t.integer  "allow_2"
+    t.string   "allow_3_label"
+    t.integer  "allow_3"
+    t.string   "allow_4_label"
+    t.integer  "allow_4"
+    t.string   "allow_5_label"
+    t.integer  "allow_5"
+    t.integer  "residents_tax"
+    t.integer  "health_insurance"
+    t.integer  "welfare_pension"
+    t.integer  "unemployment_insurance"
+    t.string   "deduction_1_label"
+    t.integer  "deduction_1"
+    t.string   "deduction_2_label"
+    t.integer  "deduction_2"
+    t.string   "deduction_3_label"
+    t.integer  "deduction_3"
+  end
+
 end
