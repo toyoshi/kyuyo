@@ -3,7 +3,7 @@ class AddColumnsToPayslip < ActiveRecord::Migration
     add_column :payslips, :outworking_time, :string
     add_column :payslips, :allow_1_label, :string
     add_column :payslips, :allow_1, :integer
-    add_column :payslips, :allow_2_label, :stirng
+    add_column :payslips, :allow_2_label, :string
     add_column :payslips, :allow_2, :integer
     add_column :payslips, :allow_3_label, :string
     add_column :payslips, :allow_3, :integer
