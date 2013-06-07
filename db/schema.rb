@@ -11,20 +11,9 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130604043545) do
+ActiveRecord::Schema.define(:version => 20130607151510) do
 
-  create_table "payslips", :force => true do |t|
-    t.date     "payslip_date"
-    t.string   "name"
-    t.date     "work_from"
-    t.date     "work_to"
-    t.integer  "working_days"
-    t.string   "working_time"
-    t.integer  "basic_pay"
-    t.integer  "transportation_expenses"
-    t.integer  "income_tax"
-    t.datetime "created_at",              :null => false
-    t.datetime "updated_at",              :null => false
-  end
+# Could not dump table "payslips" because of following StandardError
+#   Unknown type 'stirng' for column 'allow_2_label'
 
 end

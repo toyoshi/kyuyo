@@ -14,3 +14,24 @@ ja:
         work_to: '労働終了日'  #g
         working_days: '労働日数'  #g
         working_time: '労働時間'  #g
+        allow_1: allow_1  #g
+        allow_1_label: allow_1_label  #g
+        allow_2: allow_2  #g
+        allow_2_label: allow_2_label  #g
+        allow_3: allow_3  #g
+        allow_3_label: allow_3_label  #g
+        allow_4: allow_4  #g
+        allow_4_label: allow_4_label  #g
+        allow_5: allow_5  #g
+        allow_5_label: allow_5_label  #g
+        deduction_1: deduction_1  #g
+        deduction_1_label: deduction_1_label  #g
+        deduction_2: deduction_2  #g
+        deduction_2_label: deduction_2_label  #g
+        deduction_3: deduction_3  #g
+        deduction_3_label: deduction_3_label  #g
+        health_insurance: '健康保険'  #g
+        outworking_time: '所定時間外労働' #g
+        residents_tax: '住民税' #g
+        unemployment_insurance: '雇用保険' #g
+        welfare_pension: '厚生年金' #g

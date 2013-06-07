@@ -21,12 +21,8 @@
       <td colspan="2"> <%= f.text_field :name %> </td>
     </tr>
     <tr>
-      <th> <%= f.label :work_from %></th>
-      <td colspan="2"> <%= f.date_select :work_from, {}, { class: 'input-small' } %> </td>
-    </tr>
-    <tr>
-      <th> <%= f.label :work_to %></th>
-      <td colspan="2"> <%= f.date_select :work_to, {}, { class: 'input-small' } %> </td>
+      <th> <%= f.label '労働期間' %></th>
+      <td colspan="2"> <%= f.date_select :work_from, {}, { class: 'input-small' } %> から<br/> <%= f.date_select :work_to, {}, { class: 'input-small' } %> まで </td>
     </tr>
     <tr>
       <th> <%= f.label :working_days %> </th>
@@ -37,18 +33,70 @@
       <td colspan="2"> <%= f.text_field :working_time %> </td>
     </tr>
     <tr>
-      <th rowspan="2">支給額</th>
+      <th> <%= f.label :outworking_time%> </th>
+      <td colspan="2"> <%= f.text_field :outworking_time %> </td>
+    </tr>
+    <tr>
+      <th rowspan="7">支給額</th>
       <th> <%= f.label :basic_pay %> </th>
       <td> <%= f.number_field :basic_pay %> </td>
+    </tr>
+    <tr>
+      <th> <%= f.text_field :allow_1_label %> </th>
+      <td> <%= f.number_field :allow_1 %> </td>
+    </tr>
+    <tr>
+      <th> <%= f.text_field :allow_2_label %> </th>
+      <td> <%= f.number_field :allow_2 %> </td>
+    </tr>
+    <tr>
+      <th> <%= f.text_field :allow_3_label %> </th>
+      <td> <%= f.number_field :allow_3 %> </td>
+    </tr>
+    <tr>
+      <th> <%= f.text_field :allow_4_label %> </th>
+      <td> <%= f.number_field :allow_4 %> </td>
+    </tr>
+    <tr>
+      <th> <%= f.text_field :allow_5_label %> </th>
+      <td> <%= f.number_field :allow_5 %> </td>
     </tr>
     <tr>
       <th> <%= f.label :transportation_expenses %> </th>
       <td> <%= f.number_field :transportation_expenses %> </td>
     </tr>
     <tr>
-      <th rowspan="2">控除額</th>
+      <th rowspan="8">控除額</th>
       <th> <%= f.label :income_tax %> </th>
       <td> <%= f.number_field :income_tax %> </td>
+    </tr>
+    <tr>
+      <th> <%= f.label :residents_tax %> </th>
+      <td> <%= f.number_field :residents_tax %> </td>
+    </tr>
+    <tr>
+      <th> <%= f.label :health_insurance %> </th>
+      <td> <%= f.number_field :health_insurance %> </td>
+    </tr>
+    <tr>
+      <th> <%= f.label :welfare_pension %> </th>
+      <td> <%= f.number_field :welfare_pension %> </td>
+    </tr>
+    <tr>
+      <th> <%= f.label :unemployment_insurance %> </th>
+      <td> <%= f.number_field :unemployment_insurance %> </td>
+    </tr>
+    <tr>
+      <th> <%= f.text_field :deduction_1_label %> </th>
+      <td> <%= f.number_field :deduction_1 %> </td>
+    </tr>
+    <tr>
+      <th> <%= f.text_field :deduction_2_label %> </th>
+      <td> <%= f.number_field :deduction_2 %> </td>
+    </tr>
+    <tr>
+      <th> <%= f.text_field :deduction_3_label %> </th>
+      <td> <%= f.number_field :deduction_3 %> </td>
     </tr>
   </table>
 
