@@ -11,43 +11,48 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :payslip_date %><br />
-    <%= f.date_select :payslip_date, { discard_day: true, use_month_numbers: true }, { class: 'input-small' } %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :work_from %><br />
-    <%= f.date_select :work_from, {}, { class: 'input-small' } %>
-  </div>
-  <div class="field">
-    <%= f.label :work_to %><br />
-    <%= f.date_select :work_to, {}, { class: 'input-small' } %>
-  </div>
-  <div class="field">
-    <%= f.label :working_days %><br />
-    <%= f.number_field :working_days %>
-  </div>
-  <div class="field">
-    <%= f.label :working_time %><br />
-    <%= f.text_field :working_time %>
-  </div>
-  <div class="field">
-    <%= f.label :basic_pay %><br />
-    <%= f.number_field :basic_pay %>
-  </div>
-  <div class="field">
-    <%= f.label :transportation_expenses %><br />
-    <%= f.number_field :transportation_expenses %>
-  </div>
-  <div class="field">
-    <%= f.label :income_tax %><br />
-    <%= f.number_field :income_tax %>
-  </div>
+  <table class="table table-bordered">
+    <tr>
+      <th> <%= f.label :payslip_date %></th>
+      <td colspan="2"> <%= f.date_select :payslip_date, { discard_day: true, use_month_numbers: true }, { class: 'input-small' } %> </td>
+    </tr>
+    <tr>
+      <th> <%= f.label :name %></th>
+      <td colspan="2"> <%= f.text_field :name %> </td>
+    </tr>
+    <tr>
+      <th> <%= f.label :work_from %></th>
+      <td colspan="2"> <%= f.date_select :work_from, {}, { class: 'input-small' } %> </td>
+    </tr>
+    <tr>
+      <th> <%= f.label :work_to %></th>
+      <td colspan="2"> <%= f.date_select :work_to, {}, { class: 'input-small' } %> </td>
+    </tr>
+    <tr>
+      <th> <%= f.label :working_days %> </th>
+      <td colspan="2"> <%= f.number_field :working_days %> </td>
+    </tr>
+    <tr>
+      <th> <%= f.label :working_time %> </th>
+      <td colspan="2"> <%= f.text_field :working_time %> </td>
+    </tr>
+    <tr>
+      <th rowspan="2">支給額</th>
+      <th> <%= f.label :basic_pay %> </th>
+      <td> <%= f.number_field :basic_pay %> </td>
+    </tr>
+    <tr>
+      <th> <%= f.label :transportation_expenses %> </th>
+      <td> <%= f.number_field :transportation_expenses %> </td>
+    </tr>
+    <tr>
+      <th rowspan="2">控除額</th>
+      <th> <%= f.label :income_tax %> </th>
+      <td> <%= f.number_field :income_tax %> </td>
+    </tr>
+  </table>
+
   <div class="actions">
-    <%= f.submit value: 'PDFをダウンロード' %>
+    <%= f.submit value: 'PDFをダウンロード', class: 'btn btn-large btn-primary' %>
   </div>
 <% end %>
