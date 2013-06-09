@@ -13,7 +13,8 @@
 
   <p>必要事項を記入してページ下部のボタンを押せばPDFの給与明細が取得出来ます</p>
   <p><%= link_to 'こんな感じの給与明細PDF', '/sample.pdf' %>が簡単に作れます。</p>
-  <table class="table table-bordered">
+  <div> 
+  <table class="table table-bordered" style="margin:0 auto;width: 500px;">
     <tr>
       <th> <%= f.label :payslip_date %></th>
       <td colspan="2"> <%= f.date_select :payslip_date, { discard_day: true, use_month_numbers: true }, { class: 'input-small' } %> </td>
@@ -24,7 +25,7 @@
     </tr>
     <tr>
       <th> <%= f.label '労働期間' %></th>
-      <td colspan="2"> <%= f.date_select :work_from, {}, { class: 'input-small' } %> から<br/> <%= f.date_select :work_to, {}, { class: 'input-small' } %> まで </td>
+      <td colspan="2"> <%= f.date_select :work_from, {default: Date.today.beginning_of_month}, { class: 'input-small' } %> から<br/> <%= f.date_select :work_to, {default: Date.today.end_of_month}, { class: 'input-small' } %> まで </td>
     </tr>
     <tr>
       <th> <%= f.label :working_days %> </th>
@@ -41,66 +42,67 @@
     <tr>
       <th rowspan="7">支給額</th>
       <th> <%= f.label :basic_pay %> </th>
-      <td> <%= f.number_field :basic_pay %> </td>
+      <td> <%= f.number_field :basic_pay, { class: 'input-small' } %> </td>
     </tr>
     <tr>
-      <th> <%= f.text_field :allow_1_label %> </th>
-      <td> <%= f.number_field :allow_1 %> </td>
+      <th> <%= f.text_field :allow_1_label, { class: 'input-small' } %> </th>
+      <td> <%= f.number_field :allow_1, { class: 'input-small' } %> </td>
     </tr>
     <tr>
-      <th> <%= f.text_field :allow_2_label %> </th>
-      <td> <%= f.number_field :allow_2 %> </td>
+      <th> <%= f.text_field :allow_2_label, { class: 'input-small' } %> </th>
+      <td> <%= f.number_field :allow_2, { class: 'input-small' } %> </td>
     </tr>
     <tr>
-      <th> <%= f.text_field :allow_3_label %> </th>
-      <td> <%= f.number_field :allow_3 %> </td>
+      <th> <%= f.text_field :allow_3_label, { class: 'input-small' } %> </th>
+      <td> <%= f.number_field :allow_3, { class: 'input-small' } %> </td>
     </tr>
     <tr>
-      <th> <%= f.text_field :allow_4_label %> </th>
-      <td> <%= f.number_field :allow_4 %> </td>
+      <th> <%= f.text_field :allow_4_label, { class: 'input-small' } %> </th>
+      <td> <%= f.number_field :allow_4, { class: 'input-small' } %> </td>
     </tr>
     <tr>
-      <th> <%= f.text_field :allow_5_label %> </th>
-      <td> <%= f.number_field :allow_5 %> </td>
+      <th> <%= f.text_field :allow_5_label, { class: 'input-small' } %> </th>
+      <td> <%= f.number_field :allow_5, { class: 'input-small' } %> </td>
     </tr>
     <tr>
       <th> <%= f.label :transportation_expenses %> </th>
-      <td> <%= f.number_field :transportation_expenses %> </td>
+      <td> <%= f.number_field :transportation_expenses, { class: 'input-small' } %> </td>
     </tr>
     <tr>
       <th rowspan="8">控除額</th>
       <th> <%= f.label :income_tax %> </th>
-      <td> <%= f.number_field :income_tax %> </td>
+      <td> <%= f.number_field :income_tax, { class: 'input-small' } %> </td>
     </tr>
     <tr>
       <th> <%= f.label :residents_tax %> </th>
-      <td> <%= f.number_field :residents_tax %> </td>
+      <td> <%= f.number_field :residents_tax, { class: 'input-small' } %> </td>
     </tr>
     <tr>
       <th> <%= f.label :health_insurance %> </th>
-      <td> <%= f.number_field :health_insurance %> </td>
+      <td> <%= f.number_field :health_insurance, { class: 'input-small' } %> </td>
     </tr>
     <tr>
       <th> <%= f.label :welfare_pension %> </th>
-      <td> <%= f.number_field :welfare_pension %> </td>
+      <td> <%= f.number_field :welfare_pension, { class: 'input-small' } %> </td>
     </tr>
     <tr>
       <th> <%= f.label :unemployment_insurance %> </th>
-      <td> <%= f.number_field :unemployment_insurance %> </td>
+      <td> <%= f.number_field :unemployment_insurance, { class: 'input-small' } %> </td>
     </tr>
     <tr>
-      <th> <%= f.text_field :deduction_1_label %> </th>
-      <td> <%= f.number_field :deduction_1 %> </td>
+      <th> <%= f.text_field :deduction_1_label, { class: 'input-small' } %> </th>
+      <td> <%= f.number_field :deduction_1, { class: 'input-small' } %> </td>
     </tr>
     <tr>
-      <th> <%= f.text_field :deduction_2_label %> </th>
-      <td> <%= f.number_field :deduction_2 %> </td>
+      <th> <%= f.text_field :deduction_2_label, { class: 'input-small' } %> </th>
+      <td> <%= f.number_field :deduction_2, { class: 'input-small' } %> </td>
     </tr>
     <tr>
-      <th> <%= f.text_field :deduction_3_label %> </th>
-      <td> <%= f.number_field :deduction_3 %> </td>
+      <th> <%= f.text_field :deduction_3_label, { class: 'input-small' } %> </th>
+      <td> <%= f.number_field :deduction_3, { class: 'input-small' } %> </td>
     </tr>
   </table>
+</div>
 
   <div style='text-align:center' class="actions">
     <p>※入力されたデータはサーバには保存されません。</p>
