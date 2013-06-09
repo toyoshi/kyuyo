@@ -35,6 +35,8 @@
       .jumbotron h1 {
         font-size: 72px;
         line-height: 1;
+        @include zurui-ts-000;
+        @include zurui-ts-fff;
       }
       .jumbotron .btn {
         font-size: 21px;
@@ -86,7 +88,11 @@
 
 
       <footer>
-      <p>&copy; <a href="http://twitter.com/toyoshi/">@toyoshi</a> 2013</p>
+        <div class="well well-small">
+          利用規約・免責</br>
+          このサイトでは入力、アップロードされた情報は一切サーバ等に保存したりはしておりません。また、このサイトを利用して発生したいかなる問題もサイト運営者は責任を負わないものとします。
+        </div>
+        <p>&copy; <a href="http://twitter.com/toyoshi/">@toyoshi</a> 2013</p>
       </footer>
 
     </div> <!-- /container -->
