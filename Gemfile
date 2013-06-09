@@ -57,3 +57,4 @@ gem 'i18n_generators'
 
 gem 'roo'
 gem 'google-spreadsheet-ruby' 
+gem 'newrelic_rpm'
