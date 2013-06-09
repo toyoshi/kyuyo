@@ -1,4 +1,14 @@
+<h2>Excelによる給与明細一括作成</h2>
+<p>
+.xls, .xlsx形式のファイルをアップロードして給与明細を一括作成出来ます。
+</p>
+<div class='well'>
 <%= form_tag payslip_import_path, remote:true, multipart: true do %>
   <%= file_field_tag :file %>
   <%= submit_tag "アップロード" %>
 <% end %>
+</div>
+
+<h2>アップロードファイル仕様</h2>
+<p><%= link_to 'このエクセルテンプレート（sample.xlsx）', '/sample.xlsx' %>を修正して使って下さい。発行年月は表示されるのは年月だけですが日までを入れて下さい（2013/6/1など)</p>
+
