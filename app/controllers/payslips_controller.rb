@@ -1,32 +1,10 @@
 class PayslipsController < ApplicationController
 
-  # GET /payslips
-  # GET /payslips.json
-  def index
-    @payslips = Payslip.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @payslips }
-    end
-  end
-
   def pdf
     @payslip = Payslip.find(params[:id])
 
     send_data @payslip.to_pdf, filename: "payslip_#{@payslip.id}",
       type: 'application/pdf', disposition: 'attachment'
-  end
-
-  # GET /payslips/1
-  # GET /payslips/1.json
-  def show
-    @payslip = Payslip.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @payslip }
-    end
   end
 
   # GET /payslips/new
