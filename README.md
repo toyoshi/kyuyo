@@ -18,3 +18,6 @@ ThinReportsを使っています
 
 ##Demo
 [http://www.給与明細.net/](http://www.xn--jhqy89cvlqdga.net/)
+
+##License
+MIT License
