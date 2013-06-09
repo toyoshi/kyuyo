@@ -1,0 +1,34 @@
+<h1>給与明細一覧</h1>
+
+<table class="table">
+  <tr>
+    <th>年月</th>
+    <th>名前</th>
+    <th>労働時間</th>
+    <th>基本給</th>
+    <th>支給額</th>
+    <th>控除額</th>
+    <th>差引支給額</th>
+    <th></th>
+  </tr>
+
+<% @payslips.each do |payslip| %>
+  <tr>
+    <td><%= payslip.payslip_date %></td>
+    <td><%= payslip.name %></td>
+    <td><%= payslip.working_time %></td>
+    <td><%= payslip.basic_pay %></td>
+    <td><%= payslip.allowanance_amount %></td>
+    <td><%= payslip.deduction_amount %></td>
+    <td><%= payslip.balance %></td>
+    <td>
+
+      <%= form_for(payslip) do |f| %>
+        <%= hidden_field_tag :type, 'import' %>
+        <%= hidden_field_tag :payslip_obj, payslip.to_json %>
+        <%= f.submit 'PDFダウンロード' %>
+      <% end %>
+  </tr>
+<% end %>
+</table>
+

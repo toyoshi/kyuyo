@@ -42,22 +42,26 @@ class PayslipsController < ApplicationController
 
   # POST /payslips
   def create
-    @payslip = Payslip.new(params[:payslip])
+    #保存はしないのでmassasign protectionをoffにする
+    @payslip = Payslip.new((params[:payslip] || JSON.parse(params[:payslip_obj])), :without_protection => true)
 
     respond_to do |format|
       if @payslip.valid?
-
         send_data @payslip.to_pdf, filename: "payslip_#{@payslip.name}_#{@payslip.payslip_date.strftime('%Y_%m')}",
           type: 'application/pdf', disposition: 'attachment'
-
-        #save without name
-        #@payslip.name = '***'
-        #@payslip.save
-
         return
       else
         format.html { render action: "new" }
       end
+    end
+  end
+
+  def import
+    @payslips = Payslip.import(params[:file])
+
+    respond_to do |format|
+      format.html
+      format.js
     end
   end
 end

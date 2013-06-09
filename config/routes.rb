@@ -3,6 +3,7 @@ Kyuyo::Application.routes.draw do
 
   resources :payslips
   get 'payslips/:id/pdf' => 'payslips#pdf',  as: 'payslip_pdf'
+  post 'payslips/import' => 'payslips#import',  as: 'payslip_import'
 
   
 

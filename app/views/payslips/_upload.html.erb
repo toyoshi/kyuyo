@@ -1,0 +1,4 @@
+<%= form_tag payslip_import_path, remote:true, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "アップロード" %>
+<% end %>
