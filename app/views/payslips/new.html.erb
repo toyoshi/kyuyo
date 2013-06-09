@@ -1,6 +1,7 @@
 <ul class="nav nav-tabs" id="myTab">
   <li class="active"><a href="#new" data-toggle="tab">個別作成</a></li>
   <li><a href="#csv" data-toggle="tab">Excel一括作成</a></li>
+  <li><a href="#dev" data-toggle="tab">API・開発者向け</a></li>
 </ul>
 
 <div class="tab-content">
@@ -11,5 +12,15 @@
     <%= render 'upload' %>
     <div id="csv-list">
     </div>
+  </div>
+  <div class="tab-pane" id="dev">
+    <h2>API</h2>
+    <p>
+    個別作成のフォームと同じようにPOSTすれば、PDFが作成出来ます。
+    </p>
+    <h2>ライセンス・ソースコード</h2>
+    <p>
+    MITライセンスにて配布しています。<%= link_to 'github toyoshi/kyuyo', 'https://github.com/toyoshi/kyuyo' %>
+    </p>
   </div>
 </div>

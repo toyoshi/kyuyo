@@ -15,7 +15,6 @@ ThinReportsを使っています
 
  - ユーザ管理
  - 項目が足りない
- - CSV作成 
 
 ##Demo
-[http://mighty-ravine-1511.herokuapp.com/](http://mighty-ravine-1511.herokuapp.com/)
+[http://www.給与明細.net/](http://www.xn--jhqy89cvlqdga.net/)

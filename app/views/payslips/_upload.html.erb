@@ -5,7 +5,7 @@
 <div class='well'>
 <%= form_tag payslip_import_path, remote:true, multipart: true do %>
   <%= file_field_tag :file %>
-  <%= submit_tag "アップロード" %>
+  <%= submit_tag "アップロード", { class: 'btn submit' } %>
 <% end %>
 </div>
 
